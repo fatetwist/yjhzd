@@ -5,8 +5,8 @@ import json
 
 
 def output_log(ms):
-    with open('outms.log', 'a',encoding='utf-8') as file:
-        file.write(time.ctime() + ':   ' + ms + '\n')
+    with open('/usr/share/nginx/html/out2.html', 'a', encoding='utf-8') as file:
+        file.write(time.ctime() + ':  ' + ms + '\n')
 def begin(id,token):
     url = "http://ncuos.com/api/freshman/learning/" + str(id)
     headers = {
@@ -15,7 +15,7 @@ def begin(id,token):
         'Accept-Language': "zh-CN,zh;q=0.9",
         'Authorization': "passport %s" % token,
         'Connection': "keep-alive",
-        'Cookie': "_ga=GA1.2.1345916448.1517826665; _gid=GA1.2.1648392086.1517826665; _bl_uid=6bj7qdUwbq92hklgLgCygOhfz1LI",
+        'Cookie': "_bl_uid=Xaje6dg9bb36baoLam86x2Lh4mjI",
         'Host': "ncuos.com",
         'Referer': "http://ncuos.com/index/app_rxjyks",
         'User-Agent': "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36",
@@ -39,7 +39,7 @@ def put(id,token):
         'Connection': "keep-alive",
         'Content-Length': "0",
         'Content-type': "application/x-www-form-urlencoded",
-        'Cookie': "_ga=GA1.2.1345916448.1517826665; _gid=GA1.2.1648392086.1517826665; _bl_uid=6bj7qdUwbq92hklgLgCygOhfz1LI",
+        'Cookie': "_bl_uid=Xaje6dg9bb36baoLam86x2Lh4mjI",
         'Host': "ncuos.com",
         'Origin': "http://ncuos.com",
         'Referer': "http://ncuos.com/index/app_rxjyks",
@@ -60,7 +60,7 @@ def login():
 
     url = "http://ncuos.com/api/user/token"
 
-    payload = '{"username":"6103117040","password":"04631X"}'
+    payload = '{"username":"6108117077","password":"204731"}'
     headers = {
         'Accept': "*/*",
         'Accept-Encoding': "gzip, deflate",
@@ -68,7 +68,7 @@ def login():
         'Connection': "keep-alive",
         'Content-Type': "application/json",
 
-        'Cookie': "_ga=GA1.2.1345916448.1517826665; _gid=GA1.2.1648392086.1517826665; _bl_uid=6bj7qdUwbq92hklgLgCygOhfz1LI",
+        'Cookie': "_bl_uid=Xaje6dg9bb36baoLam86x2Lh4mjI",
         'Host': "ncuos.com",
         'Origin': "http://ncuos.com",
         'Referer': "http://ncuos.com/index/app_rxjyks",
